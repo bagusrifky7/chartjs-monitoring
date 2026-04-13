@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frost — Cool Treats</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Manrope&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+    h1,h2,h3 {
+      font-family: 'Lora', serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg p-6 hidden md:block">
+  <h1 class="text-2xl font-bold mb-2">Fr<span class="text-blue-400">o</span>st</h1>
+  <p class="text-sm text-gray-500 mb-6">Cool Treats for Warm Hearts</p>
+
+  <nav class="space-y-3">
+    <a href="#hero" class="block text-gray-700 hover:text-blue-500">Home</a>
+    <a href="#flavors" class="block hover:text-blue-500">Flavors</a>
+    <a href="#builder" class="block hover:text-blue-500">Build Yours</a>
+    <a href="#catering" class="block hover:text-blue-500">Catering</a>
+    <a href="#seasonal" class="block hover:text-blue-500">Seasonal</a>
+    <a href="#loyalty" class="block hover:text-blue-500">Loyalty</a>
+  </nav>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<main class="md:ml-64">
+
+<!-- HERO -->
+<section id="hero" class="min-h-screen flex items-center px-6 md:px-16 bg-gradient-to-br from-blue-50 to-pink-50">
+  <div class="max-w-2xl">
+    <span class="text-sm uppercase tracking-widest text-blue-500">Now Scooping</span>
+
+    <h1 class="text-4xl md:text-6xl font-bold mt-4 leading-tight">
+      Life's too short for <br>
+      <em class="text-blue-500">boring desserts.</em>
+    </h1>
+
+    <p class="mt-4 text-gray-600">
+      Handcrafted ice cream and gelato made fresh every morning with locally sourced ingredients.
+    </p>
+
+    <div class="mt-6 flex gap-4">
+      <a href="#flavors" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
+        Explore Flavors
+      </a>
+      <a href="#catering" class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100">
+        Book a Cart
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLAVORS -->
+<section id="flavors" class="py-20 px-6 md:px-16 bg-gray-50">
+  <div class="text-center max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold mb-2">Pick your perfect scoop</h2>
+    <p class="text-gray-500">Small-batch recipes with real ingredients.</p>
+  </div>
+
+  <div class="mt-10 grid md:grid-cols-3 gap-6">
+    
+    <div class="bg-white p-5 rounded-xl shadow">
+      <div class="h-32 rounded-lg bg-yellow-200 mb-4"></div>
+      <h3 class="font-semibold text-lg">Tahitian Vanilla Bean</h3>
+      <p class="text-sm text-gray-500 mt-2">Rich, floral, and never artificial.</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow">
+      <div class="h-32 rounded-lg bg-brown-400 mb-4"></div>
+      <h3 class="font-semibold text-lg">Dark Chocolate Truffle</h3>
+      <p class="text-sm text-gray-500 mt-2">Dense, fudgy chocolate base.</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow">
+      <div class="h-32 rounded-lg bg-green-200 mb-4"></div>
+      <h3 class="font-semibold text-lg">Fresh Mint Chip</h3>
+      <p class="text-sm text-gray-500 mt-2">Real peppermint leaves.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BUILDER -->
+<section id="builder" class="py-20 px-6 md:px-16">
+  <div class="text-center max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold">Your sundae, your rules</h2>
+    <p class="text-gray-500 mt-2">Over 2,000 combinations.</p>
+  </div>
+
+  <div class="mt-12 grid md:grid-cols-2 gap-10">
+    
+    <div class="space-y-6">
+      <div class="flex gap-4">
+        <span class="text-xl font-bold text-blue-500">1</span>
+        <p>Choose your base</p>
+      </div>
+      <div class="flex gap-4">
+        <span class="text-xl font-bold text-blue-500">2</span>
+        <p>Pick your vessel</p>
+      </div>
+      <div class="flex gap-4">
+        <span class="text-xl font-bold text-blue-500">3</span>
+        <p>Load toppings</p>
+      </div>
+      <div class="flex gap-4">
+        <span class="text-xl font-bold text-blue-500">4</span>
+        <p>Drizzle & finish</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-10 text-center">
+      <p class="text-lg font-semibold">Build-Your-Own Sundae</p>
+      <p class="text-blue-500 text-xl mt-2">$7.50</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATERING -->
+<section id="catering" class="py-20 px-6 md:px-16 bg-gray-50">
+  <div class="text-center max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold">Bring the sweetness to you</h2>
+  </div>
+
+  <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow p-5">
+      <h3 class="font-semibold text-lg">Mini Scoop</h3>
+      <p class="text-sm text-gray-500">Up to 30 guests</p>
+      <p class="mt-3 font-bold">$350</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-5">
+      <h3 class="font-semibold text-lg">Classic Cart</h3>
+      <p class="text-sm text-gray-500">Up to 100 guests</p>
+      <p class="mt-3 font-bold">$750</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-5">
+      <h3 class="font-semibold text-lg">Grand Parlor</h3>
+      <p class="text-sm text-gray-500">Up to 250 guests</p>
+      <p class="mt-3 font-bold">$1400</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOYALTY -->
+<section id="loyalty" class="py-20 px-6 md:px-16">
+  <div class="text-center max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold">Frost Rewards</h2>
+    <p class="text-gray-500">Every scoop gets you closer</p>
+  </div>
+
+  <div class="mt-10 bg-gray-100 p-8 rounded-xl text-center">
+    <p class="text-lg">7 / 10 stamps</p>
+    <p class="text-gray-500 mt-2">3 more to free scoop 🎉</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-10 px-6 md:px-16">
+  <div class="grid md:grid-cols-3 gap-6">
+    <div>
+      <h3 class="text-xl font-bold">Frost</h3>
+      <p class="text-sm text-gray-400 mt-2">Handcrafted daily.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold">Menu</h4>
+      <ul class="mt-2 space-y-1 text-gray-400">
+        <li>Flavors</li>
+        <li>Builder</li>
+        <li>Catering</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold">Connect</h4>
+      <ul class="mt-2 space-y-1 text-gray-400">
+        <li>Instagram</li>
+        <li>Facebook</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="text-center text-gray-500 mt-8 text-sm">
+    © 2026 Frost Desserts
+  </p>
+</footer>
+
+</main>
+
+</body>
+</html>

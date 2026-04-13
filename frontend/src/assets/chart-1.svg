@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Axes -->
+  <line x1="10" y1="110" x2="110" y2="110" stroke="white" stroke-width="4"></line>
+  <line x1="10" y1="110" x2="10" y2="10" stroke="white" stroke-width="4"></line>
+
+  <!-- Bars -->
+  <rect x="25" y="70" width="10" height="40" fill="white"></rect>
+  <rect x="45" y="50" width="10" height="60" fill="white"></rect>
+  <rect x="65" y="30" width="10" height="80" fill="white"></rect>
+  <rect x="85" y="15" width="10" height="95" fill="white"></rect>
+</svg>
