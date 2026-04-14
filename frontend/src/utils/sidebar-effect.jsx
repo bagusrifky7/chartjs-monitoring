@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import dropdownArrow from '../assets/gemini-svg.svg';
 
-function SidebarEffect({ id, active, setActive, hrefLink, icon , label }) {
+function SidebarEffect({ id, active, setActive, hrefLink, icon , label}) {
     const [hovered, setHovered] = useState(false)
     const isActive = active === id
 
+    
+
     return (
         <a
-            onClick={() => setActive(id)}
+            onClick={() => {setActive(id)}}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             href={hrefLink}
@@ -21,10 +23,13 @@ function SidebarEffect({ id, active, setActive, hrefLink, icon , label }) {
     )
 }
 
-function SidebarEffectDashboard({ id, active, setActive, hrefLink, icon, label, subItems = [] }) {
+function SidebarEffectDashboard({ id, active, setActive, hrefLink, icon, label, subItems = [], activeChart, setActiveChart  }) {
     const [hovered, setHovered] = useState(false)
     const [dropDown, setDropdown] = useState(false)
     const isActive = active === id
+    const handleClickChart = (item) => {
+        setActiveChart(item.chartKey)
+    }
 
     return (
         <div>
@@ -52,7 +57,7 @@ function SidebarEffectDashboard({ id, active, setActive, hrefLink, icon, label, 
                 style={{ maxHeight: dropDown ? `${subItems.length * 40}px` : '0px', opacity: dropDown ? 1 : 0 }}
             >
                 {subItems.map((item, i) => (
-                    <a key={i} href={item.href}
+                    <a key={i} href={item.href} onClick={() => setActiveChart(item.chartKey)}
                         className="flex items-center gap-2 pl-10 pr-2 py-2 rounded-lg text-sm text-white/50 hover:bg-white/5 hover:text-white/85 cursor-pointer transition-colors duration-150">
                         <span className="w-1 h-1 rounded-full bg-white/40 flex-shrink-0"></span>
                         {item.label}
