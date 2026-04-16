@@ -20,6 +20,7 @@ server_host=os.getenv("SERVER_HOST")
 server_port=os.getenv("SERVER_PORT")
 df_bast_summary = pd.read_csv('./data/df_backend_summary.csv')
 df_bast_achievement = pd.read_csv('./data/df_backend_summary.csv')
+df_project_list = pd.read_csv('./data/df_project_list.csv')
 
 # Initialize router
 router = APIRouter()
@@ -105,5 +106,49 @@ async def bast_achievement(year: int = Query(None)):
             "status": "success",
             "message": f"Filter by {year}",
             "data": df_dict_achievement
+        }
+    )
+
+# ===============================================
+# Endpoint Project List
+# - Filter by Year
+# ===============================================
+
+@router.get('/bast/project')
+async def project_list(year: int = Query(None)):
+    year_list = list(df_project_list['year'].unique())
+
+    if year is None:
+        df_filtered_project = df_project_list.to_dict(orient='records')
+
+        return JSONResponse(
+            status_code=200,
+            content={
+                "status": "success",
+                "message": "All data",
+                "data": df_filtered_project
+            }
+        )    
+
+    if (year not in year_list) & (year != None):
+        return JSONResponse(
+            status_code=400,
+            content={
+                "status": "error",
+                "message": f"Filter year {year} isn't available",
+                "data": []
+            }
+        )
+
+    df_filtered_project = df_bast_project.loc[df_bast_achievement['year'] == year]
+
+    df_dict_project = df_filtered_project.to_dict(orient='records')
+
+    return JSONResponse(
+        status_code=200,
+        content={
+            "status": "success",
+            "message": f"Filter by {year}",
+            "data": df_dict_project
         }
     )

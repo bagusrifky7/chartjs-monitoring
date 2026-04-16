@@ -4,20 +4,70 @@ function ProjectList() {
 
     const [dataProject, setDataProject] = useState([])
     const titleBox = "Project List"
-    const namaProject = "Project Name"
-    const dateProject = "Date Project"
+    const kodeProject = "Kode Project";
+    const PM = "PM";
+    const tahapanBAST = "Tahapan BAST";
+    const forecastFinance = "Forecast (Finance)";
+    const planBast = "Plan BAST";
+    const aging = "Aging";
+    const remarks = "Remarks";
+    const bastAmount = "BAST Amount";
+    const internalKickoff = "Internal Kickoff";
+    const poSpkReceive =  "PO/SPK Receive";
+    const noPoSpk = "No PO/SPK";
+    const issueCategory = "Issue Category";
+    const issueDescription = "Issue Description";
+
 
     useEffect(() => {
-        const dataProjectMock = [
-            { name: "BAST Migration System", date: "12 Apr 2026" },
-            { name: "HR Dashboard Revamp", date: "10 Apr 2026" },
-            { name: "API Integration SAP", date: "08 Apr 2026" },
-            { name: "Frontend Optimization", date: "05 Apr 2026" },
-            { name: "Security Audit", date: "01 Apr 2026" },
-            { name: "Mobile App Release", date: "28 Mar 2026" },
+        const dataProjectMock =  [{
+            kodeProject: "PRJ001",
+            PM: "Andi Saputra",
+            tahapanBAST: "On Progress",
+            forecastFinance: 150000000,
+            planBast: "2026-05-01",
+            aging: 30,
+            remarks: "Waiting vendor delivery",
+            bastAmount: 120000000,
+            internalKickoff: "2026-03-01",
+            poSpkReceive: "2026-03-05",
+            noPoSpk: "PO12345",
+            issueCategory: "Logistics",
+            issueDescription: "Delay in hardware shipment"
+          },
+          {
+            kodeProject: "PRJ002",
+            PM: "Budi Santoso",
+            tahapanBAST: "Done",
+            forecastFinance: 300000000,
+            planBast: "2026-04-01",
+            aging: 10,
+            remarks: "Completed successfully",
+            bastAmount: 300000000,
+            internalKickoff: "2026-02-01",
+            poSpkReceive: "2026-02-03",
+            noPoSpk: "PO67890",
+            issueCategory: "None",
+            issueDescription: "-"
+          },
+          {
+            kodeProject: "PRJ003",
+            PM: "Citra Lestari",
+            tahapanBAST: "Delayed",
+            forecastFinance: 500000000,
+            planBast: "2026-06-15",
+            aging: 60,
+            remarks: "Client requested scope change",
+            bastAmount: 200000000,
+            internalKickoff: "2026-01-10",
+            poSpkReceive: "2026-01-15",
+            noPoSpk: "PO11223",
+            issueCategory: "Scope",
+            issueDescription: "Additional feature requests"
+          }
         ];
 
-        setDataProject(dataProjectMock);
+        setDataProject(dataProjectMock || []);
     }, []);
 
     return (
@@ -31,8 +81,19 @@ function ProjectList() {
             
             <thead>
               <tr className="bg-gray-50 text-gray-600 text-sm">
-                <th className="p-3 text-left">{namaProject}</th>
-                <th className="p-3 text-left">{dateProject}</th>
+                <th className="p-3 text-left">{kodeProject}</th>
+                <th className="p-3 text-left">{PM}</th>
+                <th className="p-3 text-left">{tahapanBAST}</th>
+                <th className="p-3 text-left">{forecastFinance}</th>
+                <th className="p-3 text-left">{planBast}</th>
+                <th className="p-3 text-left">{aging}</th>
+                <th className="p-3 text-left">{remarks}</th>
+                <th className="p-3 text-left">{bastAmount}</th>
+                <th className="p-3 text-left">{internalKickoff}</th>
+                <th className="p-3 text-left">{poSpkReceive}</th>
+                <th className="p-3 text-left">{noPoSpk}</th>
+                <th className="p-3 text-left">{issueCategory}</th>
+                <th className="p-3 text-left">{issueDescription}</th>
               </tr>
             </thead>
 
@@ -43,11 +104,55 @@ function ProjectList() {
                   className="border-b hover:bg-gray-50 transition"
                 >
                   <td className="p-3 text-left text-blue-600 font-medium">
-                    {item.name}
+                    {item.kodeProject}
                   </td>
 
                   <td className="p-3 text-left text-green-600 font-medium">
-                    {item.date}
+                    {item.PM}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.tahapanBAST}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.forecastFinance}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.planBast}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.aging}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.remarks}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.bastAmount}
+                  </td>            
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.internalKickoff}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.poSpkReceive}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.noPoSpk}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.issueCategory}
+                  </td>
+
+                  <td className="p-3 text-left text-green-600 font-medium">
+                    {item.issueDescription}
                   </td>
 
                 </tr>

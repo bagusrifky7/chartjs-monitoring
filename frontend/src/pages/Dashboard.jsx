@@ -3,7 +3,7 @@ import { BastSummary20262031, BastAllYear } from '../utils/chart-effect';
 import { BastIssueTracking } from '../components/IssueTracking';
 import { BastSummary } from '../components/BastSummary';
 
-function Dashboard({ activeChart }) {
+function Dashboard({ activeChart, API_URL }) {
 
     return (
 
@@ -11,7 +11,7 @@ function Dashboard({ activeChart }) {
             {activeChart === "bastsummary20262031" && <BastSummary20262031 />}
             {activeChart === "bastissuetracking" && <BastIssueTracking />}
             {activeChart === "bastallyear" && <BastAllYear />}
-            {activeChart === "bastsummary" && <BastSummary />}
+            {activeChart === "bastsummary" && <BastSummary API_URL={API_URL}/>}
         </div>
     )
 }

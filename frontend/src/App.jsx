@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 function App () {
   const [activeChart, setActiveChart] = useState("");
   const [active, setActive] = useState("")
+  const API_URL = "http://localhost:8000/api"
 
   return (
   <div className='flex h-screen'>
@@ -18,7 +19,7 @@ function App () {
       </div>
 
       <div className='w-15/12 flex flex-1'>
-         <Dashboard activeChart={activeChart}/>
+         <Dashboard activeChart={activeChart} API_URL={API_URL}/>
       </div>
     </div>
   )

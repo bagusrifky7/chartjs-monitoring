@@ -46,7 +46,7 @@ async def root():
 
 # 404 Handler
 @app.exception_handler(404)
-async def not_found_handler(response: Response):
+async def not_found_handler(request: Request, exc):
     return JSONResponse(
         status_code=404,
         content={"status": "error", "message": "Route not found"}
